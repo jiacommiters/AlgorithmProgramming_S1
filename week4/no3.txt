@@ -1,0 +1,25 @@
+Program hitung_bmi
+(i.s menerima tinggi, berat)
+(f.s menampilkan bmi)
+
+Kamus
+type komposisi <
+    tinggi : real
+    berat : real
+    bmi : real
+>
+
+k : komposisi
+
+algorithm
+output("Masukan Tinggi Badan Anda (dalam meter): ")
+input(k.tinggi)
+
+output("Masukan Berat Badan Anda (dalam kg): ")
+input(k.berat)
+
+k.bmi <- k.berat / (k.tinggi * k.tinggi)
+
+output("BMI Anda : ", k.bmi)
+
+endprogram

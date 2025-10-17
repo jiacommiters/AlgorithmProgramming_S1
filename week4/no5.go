@@ -35,8 +35,6 @@ func main() {
     }
     s.bersih = s.kotor - s.biaya - s.pajak
 
-    
-    fmt.Println("\n=== LAPORAN TRANSAKSI SAHAM ===")
     fmt.Printf("Harga Beli per Saham\t: Rp %.2f\n", s.beli)
     fmt.Printf("Harga Jual per Saham\t: Rp %.2f\n", s.jual)
     fmt.Printf("Jumlah Saham\t\t: %d lembar\n", s.jSaham)
@@ -47,4 +45,5 @@ func main() {
     fmt.Printf("Pajak (10%%)\t\t: Rp %.2f\n", s.pajak)
     fmt.Println("---------------------------------")
     fmt.Printf("Laba/Rugi Bersih\t: Rp %.2f\n", s.bersih)
+	
 }

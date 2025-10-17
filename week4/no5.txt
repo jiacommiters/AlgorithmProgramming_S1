@@ -1,0 +1,54 @@
+Program TransaksiSaham
+(i.s: harga_beli, harga_jual, jumlah_saham)
+(f.s: laporan_transaksi_saham)
+
+Kamus
+    type saham <
+        beli     : real
+        jual     : real
+        jSaham   : integer
+        tinvest  : real
+        tjual    : real
+        kotor    : real
+        biaya    : real
+        pajak    : real
+        bersih   : real
+    >
+
+    s : saham
+
+Algoritma
+    output("Harga beli saham per lembar: ")
+    input(s.beli)
+    
+    output("Harga jual saham per lembar: ")
+    input(s.jual)
+    
+    output("Jumlah saham: ")
+    input(s.jSaham)
+
+    
+    s.tinvest <- s.beli * s.jSaham
+    s.tjual <- s.jual * s.jSaham
+    s.kotor <- s.tjual - s.tinvest
+    s.biaya <- s.tjual * 0.002
+
+    if s.kotor > 0 then
+        s.pajak <- s.kotor * 0.1
+    else
+        s.pajak <- 0
+    endif
+
+    s.bersih <- s.kotor - s.biaya - s.pajak
+
+    output("Harga Beli per Saham : Rp ", s.beli)
+    output("Harga Jual per Saham : Rp ", s.jual)
+    output("Jumlah Saham : ", s.jSaham, " lembar")
+    output("Total Investasi : Rp ", s.tinvest)
+    output("Total Penjualan : Rp ", s.tjual)
+    output("Laba/Rugi Kotor : Rp ", s.kotor)
+    output("Biaya Transaksi (0.2%) : Rp ", s.biaya)
+    output("Pajak (10%) : Rp ", s.pajak)
+    output("Laba/Rugi Bersih : Rp ", s.bersih)
+
+EndProgram

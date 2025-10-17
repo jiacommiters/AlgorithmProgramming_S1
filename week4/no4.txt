@@ -1,0 +1,37 @@
+Program hitung_gaji
+(i.s menerima nama, gaji_pokok, tunjangan, potongan)
+(f.s menampilkan slip gaji)
+
+Kamus
+type salary <
+    nama : string
+    gajiP : real
+    tunjangan : real
+    potongan : real
+    totalGaji : real
+>
+
+s : salary
+
+algorithm
+output("Masukan nama Pegawai : ")
+input(s.nama)
+
+output("Masukan Gaji Pokok Anda : ")
+input(s.gajiP)
+
+output("Masukan Tunjangan Anda : ")
+input(s.tunjangan)
+
+output("Masukan Potongan Gaji Anda : ")
+input(s.potongan)
+
+s.totalGaji <- s.gajiP + s.tunjangan - s.potongan
+
+output("Nama Pegawai : ", s.nama)
+output("Gaji Pokok : Rp ", s.gajiP)
+output("Tunjangan : Rp ", s.tunjangan)
+output("Potongan : Rp ", s.potongan)
+output("Total Gaji : Rp ", s.totalGaji)
+
+endprogram

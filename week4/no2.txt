@@ -1,0 +1,28 @@
+Program persegi
+(i.s menerima panjang, lebar)
+(f.s menampilkan luas, keliling)
+
+Kamus
+type persegi <
+    panjang : real
+    lebar : real
+    luas : real
+    keliling : real
+>
+
+p : persegi
+
+algorithm
+output("Masukan Nilai Panjang : ")
+input(p.panjang)
+
+output("Masukan Lebar : ")
+input(p.lebar)
+
+p.luas <- p.panjang * p.lebar
+p.keliling <- 2 * (p.panjang + p.lebar)
+
+output("Nilai Luas Persegi Panjang : ", p.luas)
+output("Nilai Keliling Persegi Panjang : ", p.keliling)
+
+endprogram

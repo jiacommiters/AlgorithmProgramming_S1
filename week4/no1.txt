@@ -1,0 +1,35 @@
+Program transaksi
+{i.s mencari total_harga}
+{f.s menemuka total_harga}
+
+Kamus
+type transaksi <
+
+nama_barang : string
+jumlah : integer
+harga : integer
+total_harga : integer
+
+> 
+
+trx : transaksi
+
+algoritma
+output("Masukan Nama Barang : ")
+input(trx.nama_barang)
+
+output("Masukan Jumlah Barang : ")
+input(trx.jumlah)
+
+output("Masukan Harga Barang : ")
+input(trx.harga)
+
+trx.total_harga <- trx.harga * trx.jumlah
+
+output("Barang Yang anda beli : ")
+output(trx.nama_barang)
+
+output("Total Transaksi Anda : )
+output(trx.total_harga)
+
+endprogram
