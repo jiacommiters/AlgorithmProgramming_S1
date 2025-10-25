@@ -11,7 +11,7 @@ func main() {
 		fmt.Scan(&angka)
 		perkalian = itteration + 1
 		angka = angka * perkalian
-		fmt.Print(angka, "")
+		fmt.Print(angka, " ")
 
 	}
 
