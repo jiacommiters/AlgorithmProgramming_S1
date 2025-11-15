@@ -9,7 +9,7 @@ func main() {
 
 	if ujian == true {
 
-		harga = harga * 0.65
+		harga = harga - (harga * 0.35)
 
 	}
 
