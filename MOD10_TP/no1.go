@@ -18,7 +18,7 @@ func main() {
 
 	} else if user != "admin" {
 
-		fmt.Println("Username Tidak Ditemukan")
+		fmt.Println("Username Tidak Diptemukan")
 
 	} else if password != "12345" {
 
