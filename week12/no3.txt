@@ -1,0 +1,22 @@
+Program Digit
+{i.s : program akan membaca sebuah bilangan bulat positif}
+{f.s : program menampilkan digit dari kanan ke kiri dan total penjumlahannya}
+
+KAMUS:
+    bilangan : integer
+    total : integer
+    digit : integer
+
+ALGORITMA:
+    INPUT(bilangan)
+    total <- 0
+    
+    WHILE (bilangan > 0) DO
+        digit <- bilangan MOD 10
+        OUTPUT(digit + " ")
+        total <- total + digit
+        bilangan <- bilangan DIV 10
+    ENDWHILE
+    
+    OUTPUT(total)
+EndProgram

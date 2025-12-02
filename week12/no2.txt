@@ -1,0 +1,25 @@
+Program Dompet
+{i.s : program akan membaca serangkaian transaksi masuk/keluar dompet}
+{f.s : program menampilkan total saldo akhir setelah transaksi berakhir}
+
+KAMUS:
+    transaksi : real
+    saldo : real
+    selesai : boolean
+
+ALGORITMA:
+    saldo <- 0
+    selesai <- false
+    
+    WHILE (selesai == false) DO
+        INPUT(transaksi)
+        
+        IF (transaksi == 0) THEN
+            selesai <- true
+        ELSE
+            saldo <- saldo + transaksi
+        ENDIF
+    ENDWHILE
+    
+    OUTPUT(saldo)
+EndProgram

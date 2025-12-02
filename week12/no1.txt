@@ -1,0 +1,27 @@
+Program Login
+{i.s : program akan membaca input username dan password secara berulang}
+{f.s : program menampilkan jumlah gagal login dan pesan berhasil}
+
+KAMUS:
+    username : string
+    password : string
+    gagalLogin : integer
+    loginBerhasil : boolean
+
+ALGORITMA:
+    gagalLogin <- 0
+    loginBerhasil <- false
+    
+    WHILE (loginBerhasil == false) DO
+        INPUT(username, password)
+        
+        IF (username == "admin" AND password == "admin") THEN
+            loginBerhasil <- true
+        ELSE
+            gagalLogin <- gagalLogin + 1
+        ENDIF
+    ENDWHILE
+    
+    OUTPUT(gagalLogin)
+    OUTPUT("Login berhasil")
+EndProgram
